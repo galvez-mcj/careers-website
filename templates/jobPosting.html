@@ -1,0 +1,13 @@
+<div class="job-postings">
+    <div class="job-posting">
+        <h4>{{job.title}}</h4>
+        {% if 'salary' in job %}
+            <p class="job-details">Location: {{job.location}} | Salary: {{job.salary}}</p>
+        {% else %}
+            <p class="job-details">Location: {{job.location}} | Salary: not listed</p>
+        {% endif %}
+    </div>
+    <div>
+        <button type="button" class="btn btn-outline-primary">Apply now</button>
+    </div>
+</div>

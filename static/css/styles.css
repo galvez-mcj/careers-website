@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 120px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+h1 {
+    font-weight: 700;
+    font-style: italic;
+}
+
+h4 {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.banner {
+    width: 100%;
+    height: 200px;
+}
+
+.container-fluid {
+    margin-top: 20px;
+}
+
+.container {
+    padding: 20px;
+}
+
+.job-container {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.job-postings {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.job-details {
+    color: gray;
+    font-size: 0.75rem;
+}
