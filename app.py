@@ -1,44 +1,19 @@
 from flask import Flask, render_template
+from database import load_jobs_from_db
+
 
 app = Flask(__name__)
 
-JOBS = [
-    {
-        'id': 1,
-        'title': 'Data Analyst',
-        'location': 'Manila, Philippines',
-        'salary': '25,000'
-    },
-    {
-        'id': 2,
-        'title': 'Associate Software Engineer',
-        'location': 'Remote',
-        'salary': '28,000'
-    },
-    {
-        'id': 3,
-        'title': 'Front-end Engineer',
-        'location': 'NCR, Philippines'
-    },
-    {
-        'id': 4,
-        'title': 'Data Scientist',
-        'location': 'Makati, Philippines',
-        'salary': '28,700'
-    },
-    {
-        'id': 5,
-        'title': 'Backend Developer',
-        'location': 'Philippines',
-        'salary': '26,500'
-    }
-]
+#############################################################
+# ROUTES
+#############################################################
 
-
+# Index route
 @app.route("/")
 def index():
-    jobs = JOBS
+    jobs = load_jobs_from_db()
     return render_template('index.html', jobs=jobs)
+
 
 
 
