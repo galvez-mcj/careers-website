@@ -2,12 +2,13 @@
     <div class="job-posting">
         <h4>{{job.title}}</h4>
         {% if 'salary' in job %}
-            <p class="job-details">Location: {{job.location}} | Salary: {{job.salary}}</p>
+            <p class="job-details">Location: {{job.location}} | Salary: Php {{job.salary}} /mo.</p>
         {% else %}
             <p class="job-details">Location: {{job.location}} | Salary: not listed</p>
         {% endif %}
     </div>
     <div>
-        <button type="button" class="btn btn-outline-primary">Apply now</button>
+        <a href=" mailto:future-careers.com?subject=Application%20for%20{{job['title']}}&body=Hi!%20I%20am%20%3Cyour%20name%20here%3E.%20I'm%20interested%20in%20applying%20for%20the%20position%20{{job['title']}}E.%0D%0A%0D%0AHere%20is%20my%20resume%3A%20%3Cresume%20link%3E%0D%0AHere%20is%20my%20LinkedIn%3A%20%3Clinkedin%20link%3E" 
+            type="button" class="btn btn-outline-primary">Apply now</a>
     </div>
 </div>

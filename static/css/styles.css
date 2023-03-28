@@ -8,11 +8,11 @@
 
 body {
     margin: 0 120px;
-    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
 
 }
 
-h1 {
+h1, h2 {
     font-weight: 700;
     font-style: italic;
 }
@@ -29,6 +29,7 @@ h4 {
 
 .container-fluid {
     margin-top: 20px;
+    margin-bottom: 100px;
 }
 
 .container {
@@ -50,3 +51,23 @@ h4 {
     color: gray;
     font-size: 0.75rem;
 }
+.nav-container {
+    padding-bottom: 0px;
+}
+
+.nav-bottom {
+    height: 115px;
+}
+
+
+/* @media screen and (max-width: 900px) {
+    body {
+        margin: 0 60px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .nav-bottom {
+        height: 120px;
+    }
+} */

@@ -7,13 +7,13 @@ JOBS = [
         'id': 1,
         'title': 'Data Analyst',
         'location': 'Manila, Philippines',
-        'salary': 'Php 25,000 /mo'
+        'salary': '25,000'
     },
     {
         'id': 2,
         'title': 'Associate Software Engineer',
         'location': 'Remote',
-        'salary': 'Php 28,000 /mo'
+        'salary': '28,000'
     },
     {
         'id': 3,
@@ -24,13 +24,13 @@ JOBS = [
         'id': 4,
         'title': 'Data Scientist',
         'location': 'Makati, Philippines',
-        'salary': 'Php 28,700 /mo'
+        'salary': '28,700'
     },
     {
         'id': 5,
         'title': 'Backend Developer',
         'location': 'Philippines',
-        'salary': 'Php 26,500 /mo'
+        'salary': '26,500'
     }
 ]
 
