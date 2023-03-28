@@ -1,7 +1,8 @@
 from sqlalchemy import create_engine, text
-from os import environ
+from os import getenv
 
-conn_str = environ.get('SQLALCHEMY_DATABASE_URI')
+#conn_str = environ.get('SQLALCHEMY_DATABASE_URI')
+conn_str = getenv('SQLALCHEMY_DATABASE_URI')
 ssl_args = {
     'ssl': {
             'ssl_ca': "/etc/ssl/cert.pem"
