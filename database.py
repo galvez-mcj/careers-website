@@ -1,8 +1,5 @@
 from sqlalchemy import create_engine, text
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 conn_str = os.getenv('SQLALCHEMY_DATABASE_URI')
 engine = create_engine(conn_str,
