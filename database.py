@@ -5,7 +5,7 @@ conn_str = environ.get('SQLALCHEMY_DATABASE_URI')
 engine = create_engine(conn_str,
                        connect_args={
                             "ssl": {
-                                    "ca": "cacert.pem"
+                                    "ssl_cert": "/etc/ssl/cert.pem"
                                 }
                        })
 
