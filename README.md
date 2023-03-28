@@ -28,12 +28,12 @@ $ venv\Scripts\activate.ps1
 
 4. Then install the dependencies:
 ```
-$ (env) pip install -r requirements.txt
+$ (venv) pip install -r requirements.txt
 ```
 
 5. Finally start the web server:
 ```
-$ (env) python app.py
+$ (venv) python app.py
 ```
 
 This server will start on port 5000 by default. You can change this in `app.py` by changing the following line to this:
