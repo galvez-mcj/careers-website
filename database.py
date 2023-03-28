@@ -2,12 +2,12 @@ from sqlalchemy import create_engine, text
 from os import environ
 
 conn_str = environ.get('SQLALCHEMY_DATABASE_URI')
-engine = create_engine(conn_str,
-                       connect_args={
-                            "ssl": {
-                                    "ssl_cert": "/etc/ssl/cert.pem"
-                                }
-                       })
+ssl_args = {
+    'ssl': {
+            'ssl_ca': "/etc/ssl/cert.pem"
+            }
+}
+engine = create_engine(conn_str, connect_args=ssl_args)
 
 
 # Load the database contents
