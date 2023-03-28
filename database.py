@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, text
-import os
+from os import environ
 
-conn_str = os.getenv('SQLALCHEMY_DATABASE_URI')
+conn_str = environ.get('SQLALCHEMY_DATABASE_URI')
 engine = create_engine(conn_str,
                        connect_args={
                             "ssl": {
@@ -21,4 +21,15 @@ def load_jobs_from_db():
 
         return jobs
 
+def load_job_from_db(id):
+    with engine.connect() as conn:
+        result = conn.execute(
+            text(f"SELECT * from jobs WHERE id = {id}")
+        )
 
+        jobs = []
+
+        for row in result:
+            jobs.append(row._mapping)
+        
+        return jobs
