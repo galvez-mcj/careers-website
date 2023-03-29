@@ -34,3 +34,22 @@ def load_job_from_db(id):
             jobs.append(row._mapping)
         
         return jobs
+
+def add_application_to_db(job_id, data):
+    with engine.connect() as conn:
+        firstName=data['firstName']
+        lastName=data['lastName']
+        email=data['email']
+        linkedin=data['linkedin']
+        address=data['address']
+        resume_url=data['resume']
+        
+        query = text(f"""
+        INSERT INTO applications
+        (job_id, firstName, lastName, email, linkedin, address, resume_url)
+        VALUES
+        ({job_id}, '{firstName}', '{lastName}', '{email}', '{linkedin}', '{address}', '{resume_url}')
+        """,
+        )
+
+        conn.execute(query)
