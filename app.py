@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, jsonify
 from database import load_jobs_from_db, load_job_from_db
 import json
 
@@ -25,10 +25,21 @@ def job_postings():
 @app.route("/job/<id>")
 def show_job(id):
     job = load_job_from_db(id) 
+
     if not job:
         return render_template('errorPage.html')
     else:
         return render_template('jobPage.html', job=job[0])
+
+
+@app.route("/job/<id>/apply", methods=["POST"])
+def apply_to_job(id):
+    job = load_job_from_db(id) 
+    data = request.form
+    
+    return render_template('applicationSubmitted.html',
+                           application=data,
+                           job=job[0])
 
 
 if __name__ == "__main__":
